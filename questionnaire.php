@@ -75,11 +75,29 @@
 			<p>
 				<label for="recherche">Que recherchez-vous?</label><br />
 			    	<select name="recherche" id="recherche">
-			    		<option value="caf">caf</option>
-			    		<option value="transp">transport</option>
-			    		<option value="p">Auvergne-Rhône-Alpes</option>
+			    		<option value="bourseCrous">Bourse crous</option>
+			    		<option value="aideLogmnt">Aide au logement</option>
+			    		<option value="scuio">Scuio ip</option>
+						<option value="medecU">Médecine universitaire</option>
+						<option value="logmntU">Logement universitaire</option>
+						<option value="RestoU">Restaurant universitaire</option>
+						<option value="cvec">Cvec</option>
+						<option value="DossSocialEtu">Dossier social étudiant</option>
+						<option value="AideMerite">Aide au mérite</option>
+						<option value="AideUrgence">Aide d'urgence</option>
 			</p>
+			<p>
+		    	<label for="region">Que souhaitez-vous faire ?</label><br />
+			        <select name="region" id="region">
+			           <option value="Fr">Etudier en France</option>
+			           <option value="Etr">Etudier à l'étranger</option>
+			           <option value="StageEtr">Faire un stage à l'étranger</option>
+			           
+			        </select>
+		    </p>
 	</fieldset>
+	
+	
 		    	
 		    <p>
 		      <input type="submit" value="Envoyer" />
