@@ -1,8 +1,6 @@
 <form method="post" action="index.php">
 	<fieldset>
 		<legend>Vous :</legend>
-		<form method="post" action="traitement.php">
-
 		    <p>
 		      <label for="nom">Nom</label> :
 		      <input type="text" placeholder="Ex : Dupont" name="nom" id="nom" required/>
@@ -71,7 +69,13 @@
 		      <label for="mail">Votre e-mail pour pouvoir être recontacter</label> :
 		      <input type="email" placeholder="Ex : dupont@gmail.com" name="mail" id="mail" required/>
 		    </p>
-	</fieldset> 
+	</fieldset>
+	<fieldset>
+		<legend>Votre Recherche</legend>
+			<p>
+				
+			</p>
+	</fieldset>
 		    	
 		    <p>
 		      <input type="submit" value="Envoyer" />
