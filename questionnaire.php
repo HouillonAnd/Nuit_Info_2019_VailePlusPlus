@@ -4,12 +4,18 @@
 		<form method="post" action="traitement.php">
 
 		    <p>
-		      <label for="Nom">Nom</label> :
-		      <input type="text" placeholder="Ex : Dupont" name="nom" id="Nom" required/>
+		      <label for="nom">Nom</label> :
+		      <input type="text" placeholder="Ex : Dupont" name="nom" id="nom" required/>
 		    </p>
 		    <p>
-		      <label for="Prenom">Prénom</label> :
-		      <input type="text" placeholder="Ex : Jean" name="prenom" id="Prenom" required/>
+		      <label for="prenom">Prénom</label> :
+		      <input type="text" placeholder="Ex : Jean" name="prenom" id="prenom" required/>
+		    </p>
+		    <p>
+		    	Veuillez indiquer votre genre :<br />
+		    	<input type="radio" name="genre" value="h" id="h" /> <label for="h">Homme</label><br />
+		    	<input type="radio" name="genre" value="f" id="f" /> <label for="f">Femme</label><br />
+		    	<input type="radio" name="genre" value="n" id="n" /> <label for="n">Non-Binaire</label><br />
 		    </p>
 		    <p>
 		        Veuillez indiquer votre situation familiale :<br />
@@ -62,10 +68,9 @@
 			       </select>
 		    </p>
 		    <p>
-		    	
+		      <label for="mail">Votre e-mail pour pouvoir être recontacter</label> :
+		      <input type="email" placeholder="Ex : dupont@gmail.com" name="mail" id="mail" required/>
 		    </p>
-		    
-
 	</fieldset> 
 		    	
 		    <p>
