@@ -44,7 +44,7 @@
 		    </p>
 		    <p>
 		    	<label for="region">Dans quelle région habitez-vous ?</label><br />
-			       <select name="region" id="region">
+			        <select name="region" id="region">
 			           <option value="ara">Auvergne-Rhône-Alpes</option>
 			           <option value="bfc">Bourgogne-Franche-Comté</option>
 			           <option value="bre">Bretagne</option>
@@ -63,7 +63,7 @@
 			           <option value="mq">Martinique</option>
 			           <option value="re">La Réunion</option>
 			           <option value="yt">Mayotte</option>
-			       </select>
+			        </select>
 		    </p>
 		    <p>
 		      <label for="mail">Votre e-mail pour pouvoir être recontacter</label> :
@@ -73,7 +73,11 @@
 	<fieldset>
 		<legend>Votre Recherche</legend>
 			<p>
-				
+				<label for="recherche">Que recherchez-vous?</label><br />
+			    	<select name="recherche" id="recherche">
+			    		<option value="caf">caf</option>
+			    		<option value="transp">transport</option>
+			    		<option value="p">Auvergne-Rhône-Alpes</option>
 			</p>
 	</fieldset>
 		    	
