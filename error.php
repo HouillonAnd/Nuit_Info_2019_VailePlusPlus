@@ -1,4 +1,5 @@
 <?php
+echo '<link rel="stylesheet" href="https://unpkg.com/@clr/ui/clr-ui.min.css" />'
 $bug = 'controller';
 	switch ($bug) {
 		case 'controller':

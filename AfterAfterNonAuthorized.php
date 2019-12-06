@@ -1,4 +1,5 @@
 <?php
+echo '<link rel="stylesheet" href="https://unpkg.com/@clr/ui/clr-ui.min.css" />'
 
 		echo "<img src='src/police' alt='Desc'>"
 			// source https://c8.alamy.com/comp/B7AM9W/police-officer-tearing-a-blank-generic-citation-from-his-ticket-book-B7AM9W.jpg
