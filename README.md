@@ -6,7 +6,7 @@
 
 ### ATOS - 404 GAME FOUND (242) 
 
-http://51.83.251.45/jeu
+http://51.83.251.45/jeu/jeu.html
 
 Sources disponibles sur la branche `master` du repo 
 
@@ -15,3 +15,7 @@ Sources disponibles sur la branche `master` du repo
 http://51.83.251.45/erreurs/login.html
 
 Sources disponibles sur la branche `ErrorFun`
+
+### Une convention de nommage pas comme les autres (229)
+
+Sources disponibles sur la branche `codelol`
