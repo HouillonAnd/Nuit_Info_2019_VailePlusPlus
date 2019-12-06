@@ -1,0 +1,28 @@
+Equipe Vaïle++
+Nuit de l'Info 2019
+Défi 242 : ATOS - 404 Game Found
+
+Membres de l'équipe :
+-Guilhem Agussol
+-Camille Bernadas
+-Andy Houillon
+-Amaury Jaspar
+-Théo Manelphe
+-Réda Regam
+-Tristan Tribes
+
+-Explication des choix-
+Vous incarnez un étudiant devant éviter les obstacles quotidiens ainsi que les drames de sa vie. (Thème du défi de l'année 2019).
+Les obstacles ainsi que la représentation du personnage sont volontairement minimalistes, comme pour souligner l'incapacité à amener à la destination désirée, provoquant ainsi l'erreur 404.
+Le jeu n'est développé qu'à partir de Javascript pur, afin d'éviter au maximum l'utilisation de bibliothèques.
+
+-Guide de jeu-
+Utilisez les flèches gauche et droite pour bouger, et appuyez sur Barre Espace pour relancer une partie.
+Essayez d'aller le plus loin possible, comme tout un chacun lors de ses études.
+Profitez de cette occasion pour vous vanter de votre "skill" sur les réseaux sociaux, en affichant votre score et en défiant vos amis !
+
+-Guide de lancement-
+Ouvrez simplement la page html dans votre navigateur, en ayant pris soin de placer le fichier .js dans le même dossier.
+
+
+
