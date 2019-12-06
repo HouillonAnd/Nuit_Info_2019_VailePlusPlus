@@ -12,9 +12,9 @@ export class UserComponent implements OnInit {
     age: number;
     email: string;
 
-  constructor(data:Map) {
-      if (data.has("name")) {
-          this.name =  data.get("name");
+  constructor(data:Map<string,any>) {
+      if (data.has("id")) {
+          this.name =  data.get("id");
       }
   }
 
