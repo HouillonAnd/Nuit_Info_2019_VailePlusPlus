@@ -33,21 +33,66 @@ function component(width, height, color, x, y, type) {
     this.width = width;
     this.height = height;
     this.speedX = 0;
-    this.speedY = 0;    
+    this.speedY = 0;
+    this.identity = ""; 
     this.x = x;
     this.y = y;
-    this.gravity = 0;
-    this.gravitySpeed = 0;
     this.update = function() {
         ctx = myGameArea.context;
         if (this.type == "text") {
             ctx.font = this.width + " " + this.height;
             ctx.fillStyle = color;
             ctx.fillText(this.text, this.x, this.y);
+        } else if (this.type == "badguy"){
+            ctx.font = this.width + " " + this.height;
+            if(this.identity == ""){
+                var cas = Math.random();
+                if (cas<0.1) {
+                    this.identity = "Impôts";
+                }
+                else if (cas<0.2) {
+                    this.identity = "Harcèlement";
+                }
+                else if (cas<0.3) {
+                    this.identity = "Panne";
+                }
+                else if (cas<0.4) {
+                    this.identity = "Dépression";
+                }
+                else if (cas<0.5) {
+                    this.identity = "Misère";
+                }
+                else if (cas<0.6) {
+                    this.identity = "Maladie";
+                }
+                else if (cas<0.7) {
+                    this.identity = "Troubles familiaux";
+                }
+                else if (cas<0.8) {
+                    this.identity = "Blessure";
+                }
+                else if (cas<0.9) {
+                    this.identity = "Isolement";
+                }
+                else if (cas>0.9) {
+                    this.identity = "Sommeil";
+                }
+
+                else{
+                    this.identity = "Suicide";
+                }
+            }
+            
+            ctx.fillText(this.identity, this.x, this.y);
+            ctx.fillStyle = "blue";
+            ctx.fillRect(this.x, this.y, this.width, this.height);
         } else {
             ctx.fillStyle = color;
             ctx.fillRect(this.x, this.y, this.width, this.height);
         }
+
+
+
     }
     this.newPos = function() {
         this.x += this.speedX;
@@ -92,8 +137,13 @@ function updateGameArea() {
         minGap = 50;
         maxGap = 200;
         gap = Math.floor(Math.random()*(maxGap-minGap+1)+minGap);
-        myObstacles.push(new component(width, 10, "red", -gap, 0));
-        myObstacles.push(new component(width, 10, "red", 270-gap, 0));
+        if(Math.random()<0.8){
+            myObstacles.push(new component(width, 10, "orange", -gap, 0));
+            myObstacles.push(new component(width, 10, "orange", 270-gap, 0));
+        } else {
+            myObstacles.push(new component(width, 10, "red", -gap, 0, "badguy"));
+            myObstacles.push(new component(width, 10, "red", 270-gap, 0, "badguy"));
+        }
                                        
     }
     for (i = 0; i < myObstacles.length; i += 1) {
