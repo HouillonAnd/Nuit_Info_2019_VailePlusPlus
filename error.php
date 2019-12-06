@@ -34,37 +34,21 @@ $bug = 'controller';
 		case 'internalError': 
 		echo "<img src='src/startrek' alt='Desc'>"
 			// source https://tse3.mm.bing.net/th?id=OIP.b3KSY6gtK4hIlTLvbmcolgHaEW&pid=Api
-			echo "Vu que nous ne faisons jamais de faute de code cela ne peut être que de votre faute, et puis vous savez personne 
+			echo "Vu que nous ne faisons jamais de faute de code cela ne peut être que de votre faute, et puis de toute façon personne 
 			n'est pa...enfin si nous on est parfaits";
-			echo "<button class='btn btn-info-outline'>Je suis pas convaincu</button>"
+			echo "<button href='/afterInternalError.php' class='btn btn-info-outline'>Je suis pas convaincu</button>"
 			break;
 			
-			case 'internalError': 
-		echo "<img src='src/star' alt='Desc'>"
-			// source https://i3.kym-cdn.com/entries/icons/original/000/001/569/insp_captkirk_5_.jpg"
 		
-			break;
 
 		case 'notAuthorized':
 		echo " <img src='src/bouncer' alt='Desc'>"
 			// source  https://tse1.mm.bing.net/th?id=OIP.B73wiiOeBKbIDDm8NskEzAHaIt&pid=Api
 			echo "Acces non autorisé";
-			echo "<button class='btn btn-danger-outline'>Insister pour avoir l'acces</button>"
+			echo "<button href='/AfterNonAuthorized/php 'class='btn btn-danger-outline'>Insister pour avoir l'acces</button>"
 			break;
 			
-		case 'notAuthorizedInsist':
-		echo "<img src='src/bouncer' alt='Desc'>"
-			// source https://knowyourmeme.com/memes/jack-blacks-octagon
-			echo "Vous ne possédez pas les droits nécessaires pour aller ici, on vous l'a déja dit faut pas insister hein";
-			echo "<button class='btn btn-danger'>Insister encore plus</button>"
-			break;	
-			
-		case 'notAuthorizedInsistMore':
-		echo "<img src='src/police' alt='Desc'>"
-			// source https://c8.alamy.com/comp/B7AM9W/police-officer-tearing-a-blank-generic-citation-from-his-ticket-book-B7AM9W.jpg
-			echo "Allez directement en prison sans passer par la case départ";
-			echo "<button class='btn btn-danger'>D'accord monsieur le commissaire</button>"
-			break;		
+		
 			
 		case 'server':
 		echo "<img src='src/serveur' alt='Desc'>"
