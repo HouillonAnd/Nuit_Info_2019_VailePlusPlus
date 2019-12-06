@@ -2,34 +2,72 @@
 $bug = 'controller';
 	switch ($bug) {
 		case 'controller':
-			echo"http://fr.hellokids.com/r_2620/coloriage/coloriage-metier/coloriage-metier-sncf"
-			echo "Ce controller n'exite pas, désolé.";
+			echo " <img src='src/controller.jpg' alt='Desc'>"
+			// source : http://fr.hellokids.com/r_2620/coloriage/coloriage-metier/coloriage-metier-sncf"
+			echo "Erreur Controleur ";
 			break;
 
 		case 'fonction':
-			echo"http://tanopah.jo.free.fr/seconde/Fdef.html"
-			echo "Cette fonction n'exite pas, désolé.";
+			echo : <img src='src/fonction' alt='Desc'>
+			// source : https://farm5.staticflickr.com/4055/4464587793_503d14c38c.jpg
+			echo "Erreur fonction inexistante";
 			break;
 
-		case 'login'
-			echo"https://www.deviantart.com/irkenartwork12/art/Behold-Meme-template-533892657"
-			echo "Le coupe utilisateur - Login choisi n'existe pas, veuillez vérifier votre identifiant et votre mot de passe.";
+		case 'login':
+		echo " <img src='src/suspicious' alt='Desc'>"
+			// source : https://tse1.mm.bing.net/th?id=OIP.vm6tKXwcmJ9OZMTxm3rgmwHaFj&pid=Api
+			echo "Login Incorrect";
+			break;
+			
+		case 'Password':
+		echo " <img src='src/kid' alt='Desc'>"
+			// source : https://tse4.mm.bing.net/th?id=OIP.jrh4lAWBQ-iO-cyUClD3bQHaLG&pid=Api
+			echo "Mot de passe Incorrect";
+			break;	
+
+		case 'ElementNotExists':
+		echo " <img src='src/scrut' alt='Desc'>"
+			// source http://www.davidgos.fr/wp-content/uploads/2012/03/insight-me-1280x800.jpg
+			echo "Erreur Element inexistant";
 			break;
 
-		case 'notExists'
-			echo"https://www.datanumen.com/blogs/4-approaches-outlook-error-file-not-exist/"
-			echo "Ce que vous cherchez n'existe pas. Veuillez rechercher autre chose";
+		case 'internalError': 
+		echo "<img src='src/startrek' alt='Desc'>"
+			// source https://tse3.mm.bing.net/th?id=OIP.b3KSY6gtK4hIlTLvbmcolgHaEW&pid=Api
+			echo "Vu que nous ne faisons jamais de faute de code cela ne peut être que de votre faute, et puis vous savez personne 
+			n'est pa...enfin si nous on est parfaits";
 			break;
 
-		case 'internalError'
-			echo"https://imgflip.com/memetemplate/20825644/picard-oops"
-			echo "Désolé, il serait possible que l'on ait mal codé.";
+		case 'notAuthorized':
+		echo " <img src='src/bouncer' alt='Desc'>"
+			// source  https://tse1.mm.bing.net/th?id=OIP.B73wiiOeBKbIDDm8NskEzAHaIt&pid=Api
+			echo "Acces non autorisé";
 			break;
-
-		case 'notAuthorized'
-			echo"https://knowyourmeme.com/memes/jack-blacks-octagon"
-			echo "Vous ne possédez pas les droits nécessaires pour aller ici.";
+			
+		case 'notAuthorizedInsist':
+		echo "<img src='src/bouncer' alt='Desc'>"
+			// source https://knowyourmeme.com/memes/jack-blacks-octagon
+			echo "Vous ne possédez pas les droits nécessaires pour aller ici, on vous l'a déja dit faut pas insister hein";
+			break;	
+			
+		case 'notAuthorizedInsistMore':
+		echo "<img src='src/police' alt='Desc'>"
+			// source https://c8.alamy.com/comp/B7AM9W/police-officer-tearing-a-blank-generic-citation-from-his-ticket-book-B7AM9W.jpg
+			echo "Allez directement en prison sans passer par la case départ";
+			break;		
+			
+		case 'server':
+		echo "<img src='src/serveur' alt='Desc'>"
+			// source http://www.chosebine.com/images/serveur-maladroit-gaffeur-faux-serveur-comedien-animation-loufoque-patronne2.jpg
+			echo "Erreur Serveur";
 			break;
+			
+		case 'PageNotExists':
+		echo "<img src='src/howdy' alt='Desc'>"
+			// source https://tse4.mm.bing.net/th?id=OIP.aNKdY791n5WYEPIuccWn4wHaHn&pid=Api + https://tse2.mm.bing.net/th?id=OIP.x5cWTFWaydb4DHQWp-bz9AHaJq&pid=Api
+			echo "Page inexistante";
+			break;	
+	
 
 		default:
 			echo "Comment êtes-vous arrivés là?";
