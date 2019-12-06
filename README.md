@@ -1,6 +1,6 @@
 # Nuit de l'info 2019
 
-**Équipe :** VailePlusPlus
+**Équipe :** Vaïle++
 
 ## Défis 
 
