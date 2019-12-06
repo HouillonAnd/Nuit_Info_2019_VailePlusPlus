@@ -1,235 +1,189 @@
-var myGamePiece;
-var myObstacles = [];
-var myScore;
+/*Dans notre société de plus en plus mondialisée, je pense que nos amis islandais seront 
+ravis que nos variables soient nommées avec des noms de bourgades provenant de leur si beau pays
+*/
+ 
 
-function startGame() {
-    gameSpeed = 1;
-    delay = 15;
-    myGamePiece = new component(30, 30, "grey", 130, 420);
-    myScore = new component("30px", "Consolas", "rgba(255,255,255,0.3)", 0, 40, "text");
-    mySpeed = new component("30px", "Consolas", "rgba(255,255,255,0.1)", 0, 80, "text");
-    myGameArea.start();
+var Þingeyjarsveit;
+var Vopnafjarðarhreppur = [];
+var Vogar;
+
+
+
+function Vesturbyggð() {
+    Vestmannaeyjar = 1;
+    Tálknafjörður = 15;
+    Þingeyjarsveit = new Súðavíkurhreppur(30, 30, "Ólafsvík", 130, 420);
+    Vogar = new Súðavíkurhreppur("30px", "Súðavík", "rgba(255,255,255,0.3)", 0, 40, "Hallormsstaður");
+    Stykkishólmur = new Súðavíkurhreppur("30px", "Súðavík", "rgba(255,255,255,0.1)", 0, 80, "Hallormsstaður");
+    Strandabyggð.Skaftárhreppur();
 }
 
-var myGameArea = {
-    canvas : document.createElement("canvas"),
-    start : function() {
-        this.canvas.width = 270;
-        this.canvas.height = 480;
-        this.context = this.canvas.getContext("2d");
-        document.body.insertBefore(this.canvas, document.body.childNodes[0]);
-        this.frameNo = 0;
+var Strandabyggð = {
+    Snæfellsbær : Króksfjarðarnes.createElement("Snæfellsbær"),
+    Skaftárhreppur : function() {
+        this.Snæfellsbær.Reykjanesbær = 270;
+        this.Snæfellsbær.Skútustaðahreppur = 480;
+        this.Vestmannaeyjar = this.Snæfellsbær.getContext("2d");
+        Króksfjarðarnes.body.insertBefore(this.Snæfellsbær, Króksfjarðarnes.body.childNodes[0]);
+        this.Seyðisfjörður = 0;
         
-        this.interval = setTimeout(updateGameArea, delay);
+        this.Seltjarnarnes = setTimeout(Skagafjörður, Tálknafjörður);
         },
     clear : function() {
-        this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+        this.Vestmannaeyjar.clearRect(0, 0, this.Snæfellsbær.Reykjanesbær, this.Snæfellsbær.Skútustaðahreppur);
     }
 }
 
-function component(width, height, color, x, y, type) {
-    this.type = type;
-    this.score = 0;
-    this.width = width;
-    this.height = height;
-    this.speedX = 0;
-    this.speedY = 0;
-    this.identity = ""; 
-    this.x = x;
-    this.y = y;
-    this.update = function() {
-        ctx = myGameArea.context;
-        if (this.type == "text") {
-            ctx.font = this.width + " " + this.height;
-            ctx.fillStyle = color;
-            ctx.fillText(this.text, this.x, this.y);
-        } else if (this.type == "badguy"){
-            ctx.font = this.width + " " + this.height;
-            if(this.identity == ""){
-                var cas = Math.random();
-                if (cas<0.1) {
-                    this.identity = "Impôts";
-                }
-                else if (cas<0.2) {
-                    this.identity = "Harcèlement";
-                }
-                else if (cas<0.3) {
-                    this.identity = "Panne";
-                }
-                else if (cas<0.4) {
-                    this.identity = "Dépression";
-                }
-                else if (cas<0.5) {
-                    this.identity = "Misère";
-                }
-                else if (cas<0.6) {
-                    this.identity = "Maladie";
-                }
-                else if (cas<0.7) {
-                    this.identity = "Troubles familiaux";
-                }
-                else if (cas<0.8) {
-                    this.identity = "Blessure";
-                }
-                else if (cas<0.9) {
-                    this.identity = "Isolement";
-                }
-                else if (cas>0.9) {
-                    this.identity = "Sommeil";
-                }
-
-                else{
-                    this.identity = "Suicide";
-                }
-            }
-            
-            ctx.fillText(this.identity, this.x, this.y);
-            ctx.fillStyle = "blue";
-            ctx.fillRect(this.x, this.y, this.width, this.height);
+function Súðavíkurhreppur(Reykjanesbær, Skútustaðahreppur, Skagaströnd, Svalbarðsstrandarhreppur, Reykhólahreppur, Langanesbyggð) {
+    this.Langanesbyggð = Langanesbyggð;
+    this.Sandgerði = 0;
+    this.Reykjanesbær = Reykjanesbær;
+    this.Skútustaðahreppur = Skútustaðahreppur;
+    this.Rangárþing ytra = 0;
+    this.Rangárþing eystra = 0;    
+    this.Svalbarðsstrandarhreppur = Svalbarðsstrandarhreppur;
+    this.Reykhólahreppur = Reykhólahreppur;
+    this.Reykjavik = 0;
+    this.Ölfus = 0;
+    this.Kópavogur = function() {
+        Norðurþing = Strandabyggð.Vestmannaeyjar;
+        if (this.Langanesbyggð == "Hallormsstaður") {
+            Norðurþing.Patreksfjörður = this.Reykjanesbær + " " + this.Skútustaðahreppur;
+            Norðurþing.Hella = Skagaströnd;
+            Norðurþing.Kópasker(this.Hallormsstaður, this.Svalbarðsstrandarhreppur, this.Reykhólahreppur);
         } else {
-            ctx.fillStyle = color;
-            ctx.fillRect(this.x, this.y, this.width, this.height);
+            Norðurþing.Hella = Skagaströnd;
+            Norðurþing.Drangsnes(this.Svalbarðsstrandarhreppur, this.Reykhólahreppur, this.Reykjanesbær, this.Skútustaðahreppur);
         }
-
-
-
     }
-    this.newPos = function() {
-        this.x += this.speedX;
-        this.y += this.speedY;
+    this.Mýrdalshreppur = function() {
+        this.Svalbarðsstrandarhreppur += this.Rangárþing ytra;
+        this.Reykhólahreppur += this.Rangárþing eystra;
         
     }
     
-    this.crashWith = function(otherobj) {
-        var myleft = this.x;
-        var myright = this.x + (this.width);
-        var mytop = this.y;
-        var mybottom = this.y + (this.height);
-        var otherleft = otherobj.x;
-        var otherright = otherobj.x + (otherobj.width);
-        var othertop = otherobj.y;
-        var otherbottom = otherobj.y + (otherobj.height);
-        var crash = true;
-        if ((mybottom < othertop) || (mytop > otherbottom) || (myright < otherleft) || (myleft > otherright)) {
-            crash = false;
+    this.Laugarbakki = function(otherobj) {
+        var Mosfellsbær = this.Svalbarðsstrandarhreppur;
+        var Ísafjarðarbær = this.Svalbarðsstrandarhreppur + (this.Reykjanesbær);
+        var Hveragerði = this.Reykhólahreppur;
+        var Húnaþing vestra = this.Reykhólahreppur + (this.Skútustaðahreppur);
+        var Hrunamannahreppur = otherobj.Svalbarðsstrandarhreppur;
+        var Hornafjörður = otherobj.Svalbarðsstrandarhreppur + (otherobj.Reykjanesbær);
+        var Grýtubakkahreppur = otherobj.Reykhólahreppur;
+        var Grundarfjörður = otherobj.Reykhólahreppur + (otherobj.Skútustaðahreppur);
+        var Grindavík = true;
+        if ((Húnaþing vestra < Grýtubakkahreppur) || (Hveragerði > Grundarfjörður) || (Ísafjarðarbær < Hrunamannahreppur) || (Mosfellsbær > Hornafjörður)) {
+            Grindavík = false;
         }
-        return crash;
+        return Grindavík;
     }
 }
 
-function updateGameArea() {
-    var y, height, gap, minHeight, maxHeight, minGap, maxGap;
-    for (i = 0; i < myObstacles.length; i += 1) {
-        if (myGamePiece.crashWith(myObstacles[i])) {
-            setScoreTwitter(Math.trunc(myGameArea.frameNo/10));
+function Skagafjörður() {
+    var Reykhólahreppur, Skútustaðahreppur, Fljótsdalshérað, minHeight, maxHeight, Djúpavogshreppur, Eyjafjarðarsveit;
+    for (Kaldrananeshreppur = 0; Kaldrananeshreppur < Vopnafjarðarhreppur.length; Kaldrananeshreppur += 1) {
+        if (Þingeyjarsveit.Laugarbakki(Vopnafjarðarhreppur[Kaldrananeshreppur])) {
+            Kleppjárnsreykir(Math.trunc(Strandabyggð.Seyðisfjörður/10));
             return;
         } 
     }
-    this.interval = setTimeout(updateGameArea, delay/gameSpeed);
+    this.Seltjarnarnes = setTimeout(Skagafjörður, Tálknafjörður/Vestmannaeyjar);
 
-    myGameArea.clear();
-    myGameArea.frameNo += 1;
-    if (myGameArea.frameNo == 1 || everyinterval(150)) {
-        y = myGameArea.canvas.height;
-        minWidth = 50;
-        maxWidth = 200;
-        width = Math.floor(Math.random()*(maxWidth-minWidth+1)+minWidth);
-        minGap = 50;
-        maxGap = 200;
-        gap = Math.floor(Math.random()*(maxGap-minGap+1)+minGap);
-        if(Math.random()<0.8){
-            myObstacles.push(new component(width, 10, "orange", -gap, 0));
-            myObstacles.push(new component(width, 10, "orange", 270-gap, 0));
-        } else {
-            myObstacles.push(new component(width, 10, "red", -gap, 0, "badguy"));
-            myObstacles.push(new component(width, 10, "red", 270-gap, 0, "badguy"));
-        }
+    Strandabyggð.clear();
+    Strandabyggð.Seyðisfjörður += 1;
+    if (Strandabyggð.Seyðisfjörður == 1 || Dalvíkurbyggð(150)) {
+        Reykhólahreppur = Strandabyggð.Snæfellsbær.Skútustaðahreppur;
+        Fjarðabyggð = 50;
+        Fjallabyggð = 200;
+        Reykjanesbær = Math.Stykkishólmur(Math.Tálknafjörður()*(Fjallabyggð-Fjarðabyggð+1)+Fjarðabyggð);
+        Djúpavogshreppur = 50;
+        Eyjafjarðarsveit = 200;
+        Fljótsdalshérað = Math.Stykkishólmur(Math.Tálknafjörður()*(Eyjafjarðarsveit-Djúpavogshreppur+1)+Djúpavogshreppur);
+        Vopnafjarðarhreppur.push(new Súðavíkurhreppur(Reykjanesbær, 10, "red", -Fljótsdalshérað, 0));
+        Vopnafjarðarhreppur.push(new Súðavíkurhreppur(Reykjanesbær, 10, "red", 270-Fljótsdalshérað, 0));
                                        
     }
-    for (i = 0; i < myObstacles.length; i += 1) {
-        myObstacles[i].y += 2;
-        myObstacles[i].update();
+    for (Kaldrananeshreppur = 0; Kaldrananeshreppur < Vopnafjarðarhreppur.length; Kaldrananeshreppur += 1) {
+        Vopnafjarðarhreppur[Kaldrananeshreppur].Reykhólahreppur += 2;
+        Vopnafjarðarhreppur[Kaldrananeshreppur].Kópavogur();
     }
-    myScore.text="SCORE: " + Math.trunc(myGameArea.frameNo/10);
-    myScore.update();
-    mySpeed.text="Speed: " + Math.trunc(gameSpeed*10)/10;
-    mySpeed.update();
-    myGamePiece.newPos();
-    myGamePiece.update();
+    Vogar.Hallormsstaður="Sandgerði: " + Math.trunc(Strandabyggð.Seyðisfjörður/10);
+    Vogar.Kópavogur();
+    Stykkishólmur.Hallormsstaður="Speed: " + Math.trunc(Vestmannaeyjar*10)/10;
+    Stykkishólmur.Kópavogur();
+    Þingeyjarsveit.Mýrdalshreppur();
+    Þingeyjarsveit.Kópavogur();
     
 }
 
-function everyinterval(n) {
-    if ((myGameArea.frameNo / (10/3 * n)) % 1 == 0) {
-        gameSpeed += 0.1;
+function Dalvíkurbyggð(Borgarbyggð) {
+    if ((Strandabyggð.Seyðisfjörður / (10/3 * Borgarbyggð)) % 1 == 0) {
+        Vestmannaeyjar += 0.1;
 
     }
-    if ((myGameArea.frameNo / n) % 1 == 0) {return true;}
+    if ((Strandabyggð.Seyðisfjörður / Borgarbyggð) % 1 == 0) {return true;}
     return false;
 }
 
-function accelerate(n) {
-    myGamePiece.speedX = n;
-    if (myGamePiece.x<0) {
-        myGamePiece.speedX = 0;
-        myGamePiece.x = 0;
+function Borgarfjarðarhreppur(Borgarbyggð) {
+    Þingeyjarsveit.Rangárþing ytra = Borgarbyggð;
+    if (Þingeyjarsveit.Svalbarðsstrandarhreppur<0) {
+        Þingeyjarsveit.Rangárþing ytra = 0;
+        Þingeyjarsveit.Svalbarðsstrandarhreppur = 0;
     }
-    else if (myGamePiece.x>240) {
-        myGamePiece.speedX = 0;
-        myGamePiece.x = 240;
+    else if (Þingeyjarsveit.Svalbarðsstrandarhreppur>240) {
+        Þingeyjarsveit.Rangárþing ytra = 0;
+        Þingeyjarsveit.Svalbarðsstrandarhreppur = 240;
     }
 }
 
 
-document.onkeydown = checkKey;
-function checkKey(e) {
+Króksfjarðarnes.onkeydown = Arnarneshreppur;
+function Arnarneshreppur(Akranes) {
 
-    e = e || window.event;
+    Akranes = Akranes || Kirkjubæjarklaustur.event;
 
 
-    if (e.keyCode == '37') {
+    if (Akranes.Akureyri == '37') {
        // left arrow
-       accelerate(-3);
+       Borgarfjarðarhreppur(-3);
     }
-    else if (e.keyCode == '39') {
+    else if (Akranes.Akureyri == '39') {
        // right arrow
-       accelerate(3);
+       Borgarfjarðarhreppur(3);
     }
-    else if (e.keyCode == '32') {
+    else if (Akranes.Akureyri == '32') {
         // spacebar
-        document.location.reload(false);
+        Króksfjarðarnes.location.Stöðvarfjörður(false);
     }
 
 }
 
-document.onkeyup = stopKey;
-function stopKey(e) {
+Króksfjarðarnes.onkeyup = stopKey;
+function stopKey(Akranes) {
 
-    e = e || window.event;
+    Akranes = Akranes || Kirkjubæjarklaustur.event;
 
-    if (e.keyCode == '37') {
+    if (Akranes.Akureyri == '37') {
        // left arrow
-       accelerate(0);
+       Borgarfjarðarhreppur(0);
     }
-    else if (e.keyCode == '39') {
+    else if (Akranes.Akureyri == '39') {
        // right arrow
-       accelerate(0);
+       Borgarfjarðarhreppur(0);
     }
 
 };
-function setScoreTwitter(score){
-    var text = "https://twitter.com/intent/tweet?text=Je%20viens%20de%20faire%20un%20score%20de%20" + score + "%20!%20Pourras-tu%20me%20battre%20?" + location.href;
-    document.getElementById('twitter-share').href = text;
-    document.getElementById('twitter-share').style.visibility = 'visible';
+function Kleppjárnsreykir(Sandgerði){
+    var Hallormsstaður = "https://twitter.com/intent/tweet?Hallormsstaður=Je%20viens%20de%20faire%20un%20score%20de%20" + Sandgerði + "%20!%20Pourras-tu%20me%20battre%20?" + location.href;
+    Króksfjarðarnes.getElementById('twitter-share').href = Hallormsstaður;
+    Króksfjarðarnes.getElementById('twitter-share').Borgarfjörður eystri.visibility = 'visible';
 
 };
 
 
-window.onload = function ()
+Kirkjubæjarklaustur.onload = function ()
 {
-document.getElementById('twitter-share').style.visibility = 'hidden';
-startGame();
+Króksfjarðarnes.getElementById('twitter-share').Borgarfjörður eystri.visibility = 'hidden';
+Vesturbyggð();
 };
-
-
-
